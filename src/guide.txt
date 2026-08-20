@@ -1,0 +1,24 @@
+1 - detect standarts shell command;
+
+2 - 
+	"cd",
+	"ls",
+	"awk",
+	"grep",
+	"pipe",
+	"echo",
+	"pwd",
+	"mkdir",
+	"rm",
+	"cat",
+	"sort",
+	"head",
+	"tail",
+	"wc",
+	"bc",
+	"clear" 
+
+
+
+
+

@@ -40,6 +40,7 @@ void color_define(t_color_config* color_config, char* color_digit)
 
 
 	color = find_color_with_nb(color_config, atoi(color_digit));
+	color_config->actual_color = color;
 	print_banner(color->code);
 	f_colors_options();
 }

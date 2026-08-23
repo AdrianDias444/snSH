@@ -20,5 +20,32 @@
 
 
 
+Concepts:
+    ◦ Inter process communication using pipes
+    ◦ Termcaps
+
+Autorized functions:
+    ◦ fork()
+    ◦ wait()
+    - exec()
+
+Autorized libraries:
+    ◦ The entire libc.
+    ◦ The readline library (-lreadline).
+    ◦ The termcap and/or the ncurses libraries (-ltermcap and/or -lncurses).
 
 
+Built-ins
+    ◦ cd
+    ◦ echo
+    ◦ exit
+    ◦ type
+
+
+
+
+
+Notes:
+    Functions:
+        ◦ chdir
+        ◦ subdir

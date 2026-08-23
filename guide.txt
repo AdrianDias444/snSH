@@ -48,8 +48,12 @@ Notes:
 
 To Do:
 	-> improve ["color"] command:
-		.select specific color passing the respective MACRO "BHYEL"(for exemple)
+		select specific color passing the respective MACRO "BHYEL"(for exemple)
 		.add colors flags, like ["colors -n"], for view the current color MACRO
-		.in ["colors --help], print MACRO with their respective color
+		.["command"] to change text printed after this momment
+		in ["colors --help], print MACRO with their respective color
 	-> last commands executed, with arrows
 	-> start built-ins
+		.ls command, first show all of the folder first. pls
+	-> command bar
+	-> 

@@ -76,13 +76,25 @@ char* f_error_msg(char* unknown_command);
 
 void cd();
 void clear();
+
+
+
+void color_parser(t_color_config* color_config, char** cmd_args);
 void color(t_color_config* color_config);
-void ls();
 void color_help();
+void color_define(t_color_config* color_config, char* color_digit);
+t_color* find_color_with_nb(t_color_config* color_config, int nb);
+
+void ls();
 
 
 char* f_strjoin(char* s1, char* s2);
 size_t f_strlen(char* str);
+size_t	f_strlcpy(char *dst, char *src, size_t size);
+char* f_strdup(char* str);
+char* f_remove_newline(char* str);
+char	**f_split(char* s, char c);
+
 
 
 void print_banner(char* color);
@@ -91,8 +103,9 @@ t_color_config* init_color();
 
 
 void f_push_back(t_color* node_to_add, t_color_config* node_config);
-t_color* f_create_color_node(char* color_code);
+t_color* f_create_color_node(char* color_code, int nb);
 t_color_config* f_create_color_config();
+void f_colors_options(void);
 
 
 # endif

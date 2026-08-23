@@ -29,7 +29,7 @@ void f_push_back(t_color* node_to_add, t_color_config* node_config)
 }
 
 
-t_color* f_create_color_node(char* color_code)
+t_color* f_create_color_node(char* color_code, int nb)
 {
 	t_color* color_struct;
 
@@ -38,6 +38,7 @@ t_color* f_create_color_node(char* color_code)
 	if(!color_struct)
 		return(NULL);
 	color_struct -> code = color_code;
+	color_struct -> nb = nb;
 	color_struct -> next = NULL;
 	return(color_struct);
 }

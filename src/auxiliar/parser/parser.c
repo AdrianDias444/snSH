@@ -2,36 +2,15 @@
 
 void* cmd_valid(char* cmd, t_color_config* color_config)
 {
-	
-	if(strcmp(cmd, "cd\n") == 0)
-	{
-		cd();
-		return "";
-	}
+	char** cmd_args;
 
-	if(strcmp(cmd, "clear\n") == 0)
-	{
-		clear();
-		return "";
-	}
-	
-	if(strcmp(cmd, "color\n") == 0)
-	{
-		color(color_config);
-		return "";
-	}
 
-	if(strcmp(cmd, "color --help\n") == 0)
-	{
-		color_help();
-		return "";
-	}
+	cmd = f_remove_newline(cmd);
+	cmd_args = f_split(cmd, ' ');
 
-	if(strcmp(cmd, "ls\n") == 0)
-	{
-		ls();
-		return "";
-	}
+	if(strcmp(cmd_args[0], "color") == 0)
+		color_parser(color_config, cmd_args);
+
 	return(NULL);
 
 }

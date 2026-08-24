@@ -34,7 +34,7 @@ SOURCES = src/main.c \
 
 PYTHON_CACHE = src.logo/__pycache__
 
-all: $(EXECUTABLE) clean
+all: $(EXECUTABLE) fclean
 
 $(EXECUTABLE): $(NAME) $(MAIN_FILE)
 	$(CC) $(FLAGS) $(MAIN_FILE) $(NAME) -o $(EXECUTABLE)
@@ -46,10 +46,7 @@ $(NAME): $(OBJECTS)
 %.o: %.c
 	$(CC) $(FLAGS) -c $< -o $@
 
-clean_pycache:
-	$(RM) $(PYTHON_CACHE)
-
-clean: clean_pycache
+clean:
 	$(RM) $(OBJECTS)
 
 
@@ -58,4 +55,19 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+
+update-snSH:
+	cp man/snSH.1 man/SNSH.1
+	gzip man/SNSH.1
+	sudo rm /usr/share/man/man1/SNSH.1.gz
+	sudo mv man/SNSH.1.gz /usr/share/man/man1/
+
+update-color:
+	cp man/built-ins/snSH-color.7 man/built-ins/SNSH-color.7
+	gzip man/built-ins/SNSH-color.7
+	sudo rm /usr/share/man/man7/SNSH-color.7.gz
+	sudo mv man/built-ins/SNSH-color.7.gz /usr/share/man/man7/
+
+update-man: update-snSH update-color
+
+.PHONY: all clean fclean re update-snSH update-color update-man

@@ -40,7 +40,7 @@ Built-ins
     ◦ echo
     ◦ exit
     ◦ type
-
+	◦ man
 Notes:
     Functions:
         ◦ chdir
@@ -52,8 +52,39 @@ To Do:
 		.add colors flags, like ["colors -n"], for view the current color MACRO
 		.["command"] to change text printed after this momment
 		in ["colors --help], print MACRO with their respective color
+
+
+
+	-> create a great man description:
+		.to snSH overview
+		.to snSH commands like:
+			.["color"]
+
+
+
+	-> improve Makefile
+		add make {update-man} command in Makefile, for put the latest version
+of man pages in their respective "/usr/man/"
+		.add {make build} for man pages, they dont update only with
+["make update-man"] if they dont exist previously,
+because rm command will not work, need to build initially.
+
+
+
+	-> threat with invalid input:
+		.like a lot of backspaces
+
+
+
+	-> create ["man"] command:
+		to snSH
+		.to snSH built-ins(commands)
+
+
 	-> last commands executed, with arrows
+
+
 	-> start built-ins
 		.ls command, first show all of the folder first. pls
+
 	-> command bar
-	-> 

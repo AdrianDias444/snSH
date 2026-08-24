@@ -30,7 +30,10 @@ SOURCES = src/main.c \
 		src/logo/crt_color_lst.c \
 		src/logo/logo.c \
 		src/logo/init_color.c \
-		src/logo/snailfetch.c
+		src/logo/snailfetch.c \
+		\
+		src/command-bar/command_bar.c \
+		src/command-bar/bar_init.c
 
 
 PYTHON_CACHE = src.logo/__pycache__

@@ -6,8 +6,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "logo/colors.h"
 
+
+#include "logo/colors.h"
+#include "command-bar/bar.h"
 
 #define BOOL_TRUE 1
 
@@ -69,7 +71,7 @@ typedef struct s_config
 
 
 char* retrieve_cmd(char* argv);
-void parser(char* argv, t_color_config* color_config);
+void parser(char* argv, t_color_config* color_config, t_bar* bar);
 char* f_error_msg(char* unknown_command);
 
 
@@ -79,10 +81,10 @@ void clear();
 
 
 
-void color_parser(t_color_config* color_config, char** cmd_args);
-void color(t_color_config* color_config);
-void color_help();
-void color_define(t_color_config* color_config, char* color_digit);
+void color_parser(t_color_config* color_config, char** cmd_args, t_bar* bar);
+void color(t_color_config* color_config, t_bar* bar);
+void color_help(t_bar* bar);
+void color_define(t_color_config* color_config, char* color_digit, t_bar* bar);
 void color_name(t_color_config* color_config);
 t_color* find_color_with_nb(t_color_config* color_config, int nb);
 
@@ -117,7 +119,6 @@ void bold_blue(void);
 void bold_magenta(void);
 void bold_cyan(void);
 void bold_white(void);
-
 
 
 # endif

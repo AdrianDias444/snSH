@@ -89,12 +89,14 @@ because rm command will not work, need to build initially.
 		.to snSH built-ins(commands)
 
 
-	-> last commands executed, with arrows
+	-> implement flashback system
+		.last commands executed, with arrows
 
 
 	-> start built-ins
 		.ls command, first show all of the folder first. pls
 
 	-> command bar
-		.change color os command bar
+		.implement a command bar
+		.change color of command bar
 		.change format of command bar

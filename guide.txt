@@ -49,9 +49,17 @@ Notes:
 To Do:
 	-> improve ["color"] command:
 		select specific color passing the respective MACRO "BHYEL"(for exemple)
-		.add colors flags, like ["colors -n"], for view the current color MACRO
+		add colors flags, like ["colors -n"], for view the current color MACRO
 		.["command"] to change text printed after this momment
 		in ["colors --help], print MACRO with their respective color
+
+	-> create ["snailfetch"] command:
+		like a neofetch, only for print actual banner color letter
+		.snailfetch improve to show pc details
+		.snailfetch improve to show/hide with
+["snailfetch show/hide"]
+		.snailfetch improve to show specific arch based
+Linux distributions logo ascii/unicode.
 
 
 
@@ -88,3 +96,5 @@ because rm command will not work, need to build initially.
 		.ls command, first show all of the folder first. pls
 
 	-> command bar
+		.change color os command bar
+		.change format of command bar

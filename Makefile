@@ -29,7 +29,8 @@ SOURCES = src/main.c \
 		src/logo/colors_options.c \
 		src/logo/crt_color_lst.c \
 		src/logo/logo.c \
-		src/logo/init_color.c
+		src/logo/init_color.c \
+		src/logo/snailfetch.c
 
 
 PYTHON_CACHE = src.logo/__pycache__

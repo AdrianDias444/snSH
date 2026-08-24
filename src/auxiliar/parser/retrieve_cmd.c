@@ -22,6 +22,9 @@ char* valid_cmds(char* cmd)
 	
 	if(strcmp(cmd_args[0], "exit") == 0)
 		exit(1);
+	
+	if(strcmp(cmd_args[0], "snailfetch") == 0)
+		return(cmd);
 
 	return(NULL);
 }

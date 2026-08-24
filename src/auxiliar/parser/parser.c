@@ -10,7 +10,8 @@ void* cmd_valid(char* cmd, t_color_config* color_config)
 
 	if(strcmp(cmd_args[0], "color") == 0)
 		color_parser(color_config, cmd_args);
-
+	if(strcmp(cmd_args[0], "snailfetch") == 0)
+		snailfetch(color_config);
 	return(NULL);
 
 }

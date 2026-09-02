@@ -1,20 +1,19 @@
 #include "../header.h"
 
 // color manager
-void color_parser(t_color_config* color_config, char** cmd_args, t_bar* bar)
+void color_parser(t_color_config* color_config, char** cmd_args)
 {
 
 	if (!cmd_args[1])
 	{
-		color(color_config, bar);
+		color(color_config);
 		return ;
 	}
-
 	if (strcmp(cmd_args[1], "--help") == 0)
-		color_help(bar);
+		color_help();
 
 	if (strcmp(cmd_args[1], "--define") == 0)
-		color_define(color_config, cmd_args[2], bar);
+		color_define(color_config, cmd_args[2]);
 
 	if (strcmp(cmd_args[1], "-n") == 0)
 		color_name(color_config);
@@ -22,24 +21,22 @@ void color_parser(t_color_config* color_config, char** cmd_args, t_bar* bar)
 
 
 // color
-void color(t_color_config* color_config, t_bar* bar)
+void color(t_color_config* color_config)
 {
 	color_config->actual_color = color_config->actual_color->next;
 	print_banner(color_config->actual_color->code);
-	f_command_bar_manager(bar);
 	f_colors_options();
 }
 
 // color --help
-void color_help(t_bar* bar)
+void color_help(void)
 {
 	printf(CLEAR);
-	f_command_bar_manager(bar);
 	f_colors_options();
 }
 
 // color --define
-void color_define(t_color_config* color_config, char* color_digit, t_bar* bar)
+void color_define(t_color_config* color_config, char* color_digit)
 {
 	t_color* color;
 
@@ -47,7 +44,6 @@ void color_define(t_color_config* color_config, char* color_digit, t_bar* bar)
 	color = find_color_with_nb(color_config, atoi(color_digit));
 	color_config->actual_color = color;
 	print_banner(color->code);
-	f_command_bar_manager(bar);
 	f_colors_options();
 }
 

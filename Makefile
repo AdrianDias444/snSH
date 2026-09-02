@@ -31,14 +31,19 @@ SOURCES = src/main.c \
 		src/snailfetch/allocs/create_color_config.c \
 		src/snailfetch/allocs/create_color_node.c \
 		\
-		src/command-bar/command_bar.c \
+		src/command-bar/bar.c \
 		src/command-bar/bar_init.c \
 		src/command-bar/allocs/create_bar_struct.c \
 		\
 		src/parser/check_input.c \
 		src/parser/error_msg.c \
-		src/parser/main_parser.c \
-		src/parser/valid_cmd.c
+		src/parser/parser.c \
+		src/parser/valid_cmd.c \
+		\
+		src/init_shell/init.c \
+		src/init_shell/allocs/init_create.c \
+		\
+		src/caller/caller.c
 
 PYTHON_CACHE = src.logo/__pycache__
 

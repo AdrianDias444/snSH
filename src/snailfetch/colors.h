@@ -7,9 +7,11 @@
 
 
 
-#ifndef CLEAR
+#ifndef COLORS_H
+#define COLORS_H
+
+
 #define CLEAR "\033[2J\033[1;1H"
-#endif
 
 
 //Regular text
@@ -103,3 +105,5 @@ typedef struct s_color_config
 	size_t		color_counter;
 }	t_color_config;
 
+
+#endif

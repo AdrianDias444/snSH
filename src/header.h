@@ -8,9 +8,12 @@
 #include <string.h>
 
 
+#include "lib/lib.h"
 #include "snailfetch/colors.h"
 #include "command-bar/bar.h"
+#include "init_shell/init.h"
 #include "parser/parser.h"
+#include "caller/caller.h"
 
 #define BOOL_TRUE 1
 
@@ -47,11 +50,9 @@ typedef struct s_flashbacks
 
 
 ////////////////////////////////////////////
-// struct that contais a lot of important
-// information
+// struct that contais some informations
 //
 // -> Actual path, similar to ["pwd"] command
-// -> The actual bar, like: ~/git/My_Projects/snSH/src/
 // -> A pointer to t_flashbacks struct,
 // this one contains the a linked the newest command
 // in a linked list
@@ -65,29 +66,19 @@ typedef struct s_config
 
 
 
-char* retrieve_cmd(char* argv);
-
 void cd();
 void clear();
 
+void color_parser(t_color_config* color_config, char** cmd_args);
 
 
-void color(t_color_config* color_config, t_bar* bar);
-void color_help(t_bar* bar);
-void color_define(t_color_config* color_config, char* color_digit, t_bar* bar);
+void color(t_color_config* color_config);
+void color_help(void);
+void color_define(t_color_config* color_config, char* color_digit);
 void color_name(t_color_config* color_config);
 t_color* find_color_with_nb(t_color_config* color_config, int nb);
 
 void ls();
-
-
-char* f_strjoin(char* s1, char* s2);
-size_t f_strlen(char* str);
-size_t	f_strlcpy(char *dst, char *src, size_t size);
-char* f_strdup(char* str);
-char* f_remove_newline(char* str);
-char** f_split(char* s, char c);
-char* f_strip(char* str);
 
 
 

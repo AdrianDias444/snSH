@@ -1,16 +1,16 @@
 #include "../../header.h"
 
 
-t_bar* create_bar_struct()
+t_bar* create_bar_struct(t_color* color)
 {
 	t_bar* bar;
 
-	bar = malloc(sizeof(bar));
+	bar = malloc(sizeof(t_bar));
 	if(!bar)
 		return(NULL);
 	bar->path = NULL;
 	bar->last_command = NULL;
-	bar->color = NULL;
+	bar->color = color;
 	return(bar);
 }
 

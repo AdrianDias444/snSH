@@ -1,6 +1,6 @@
 #include "../header.h"
 
-
+// Allocs Memory
 t_flashbacks* create_flashbacks(void)
 {
 	t_flashbacks* flashbacks;

@@ -36,7 +36,7 @@ void cpy_printable_char(char* str, char* buff)
 	buff[j] = '\0';
 }
 
-// Alloc Memory
+// Allocs Memory
 // This is not the real strip like the method in python, this only
 // "strip" the non printable characters based in ascii code
 char* f_strip(char* str)

@@ -1,5 +1,6 @@
 #include "../../header.h"
 
+// Allocs Memory
 t_color* f_create_color_node(char* color_code, int nb)
 {
 	t_color* color_struct;
@@ -13,7 +14,6 @@ t_color* f_create_color_node(char* color_code, int nb)
 	color_struct -> next = NULL;
 	return(color_struct);
 }
-
 
 // color node struct
 //

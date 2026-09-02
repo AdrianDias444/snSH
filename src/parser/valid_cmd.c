@@ -1,6 +1,6 @@
 #include "../header.h"
 
-// Alloc Memory
+// Allocs Memory
 void alloc_only_one_command(char** array, char* command, int line)
 {
 	size_t len;
@@ -15,7 +15,7 @@ void alloc_only_one_command(char** array, char* command, int line)
 
 
 
-// Alloc Memory
+// Allocs Memory
 char** valid_cmd()
 {
 	char** array;

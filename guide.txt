@@ -71,8 +71,9 @@ Linux distributions logo ascii/unicode.
 
 	-> refactor and change all the architecture
 		parser
-		.command bar
-		.snailfetch
+			.need to fix some segfaults
+		command bar
+		snailfetch
 
 	-> improve Makefile
 		add make {update-man} command in Makefile, for put the latest version

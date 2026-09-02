@@ -2,11 +2,15 @@
 
 int main(void)
 {
-	char* input;
+	char**	input;
+	t_init*	init;
 
+	init = f_init();
 	while(BOOL_TRUE)
 	{
+		print_bar(init->bar);
 		input = parser(valid_cmd());
+		caller(input, init);
 	}
 }
 

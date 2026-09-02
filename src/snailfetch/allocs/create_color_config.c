@@ -1,7 +1,7 @@
 #include "../../header.h"
 
 
-
+// Allocs Memory
 t_color_config* f_create_color_config()
 {
 	t_color_config* color_config;

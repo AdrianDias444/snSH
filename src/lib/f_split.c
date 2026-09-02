@@ -46,7 +46,7 @@ static void	ft_free_all(char **str, size_t a)
 	free(str);
 }
 
-static char	**f_splitcpy(char* s, char c, char **str)
+static char**	f_splitcpy(char* s, char c, char **str)
 {
 	size_t	a;
 	size_t	i;
@@ -75,7 +75,7 @@ static char	**f_splitcpy(char* s, char c, char **str)
 	return (str);
 }
 
-char	**f_split(char* s, char c)
+char**	f_split(char* s, char c)
 {
 	char	**str;
 	size_t	word_count;

@@ -48,8 +48,8 @@ Notes:
 
 To Do:
 	-> improve ["color"] command:
-		select specific color passing the respective MACRO "BHYEL"(for exemple)
-		add colors flags, like ["colors -n"], for view the current color MACRO
+		select specific color passing the respective digit for color
+		add colors flags, like ["colors -n"], for view the current color digit
 		.["command"] to change text printed after this momment
 		in ["colors --help], print MACRO with their respective color
 
@@ -100,3 +100,6 @@ because rm command will not work, need to build initially.
 		.implement a command bar
 		.change color of command bar
 		.change format of command bar
+
+	-> Arch Package
+		.turn snailfetch a arch linux package, to be installed

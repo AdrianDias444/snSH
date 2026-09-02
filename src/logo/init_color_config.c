@@ -26,7 +26,7 @@ void f_create_all_nodes(t_color_config* color_config)
 	last_color_node->next = first_color_node;
 }
 
-t_color_config* init_color()
+t_color_config* init_color_config()
 {
 
 	t_color_config* color_config;

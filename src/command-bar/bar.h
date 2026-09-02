@@ -3,7 +3,7 @@ typedef struct s_bar
 {
 	char* 			path;
 	char*			last_command;
-	struct t_color* color;
+	t_color* color;
 } t_bar;
 
 

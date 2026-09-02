@@ -27,33 +27,3 @@ void f_push_back(t_color* node_to_add, t_color_config* node_config)
 	}
 	last_node -> next = node_to_add;
 }
-
-
-t_color* f_create_color_node(char* color_code, int nb)
-{
-	t_color* color_struct;
-
-
-	color_struct = malloc(sizeof(t_color));
-	if(!color_struct)
-		return(NULL);
-	color_struct -> code = color_code;
-	color_struct -> nb = nb;
-	color_struct -> next = NULL;
-	return(color_struct);
-}
-
-
-t_color_config* f_create_color_config()
-{
-	t_color_config* color_config;
-
-
-
-	color_config = malloc(sizeof(t_color_config));
-	if(!color_config)
-		return(NULL);
-	color_config->actual_color = NULL;
-	color_config->color_counter = 0;
-	return(color_config);
-}

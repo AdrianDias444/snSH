@@ -29,11 +29,14 @@ SOURCES = src/main.c \
 		src/logo/colors_options.c \
 		src/logo/crt_color_lst.c \
 		src/logo/logo.c \
-		src/logo/init_color.c \
+		src/logo/init_color_config.c \
 		src/logo/snailfetch.c \
+		src/logo/allocs/create_color_config.c \
+		src/logo/allocs/create_color_node.c \
 		\
 		src/command-bar/command_bar.c \
-		src/command-bar/bar_init.c
+		src/command-bar/bar_init.c \
+		src/command-bar/allocs/create_bar_struct.c
 
 
 PYTHON_CACHE = src.logo/__pycache__

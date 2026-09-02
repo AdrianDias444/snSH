@@ -64,12 +64,6 @@ typedef struct s_config
 
 
 
-
-
-
-
-
-
 char* retrieve_cmd(char* argv);
 void parser(char* argv, t_color_config* color_config, t_bar* bar);
 char* f_error_msg(char* unknown_command);
@@ -102,13 +96,15 @@ char** f_split(char* s, char c);
 
 void print_banner(char* color);
 void snailfetch(t_color_config* color_config);
-t_color_config* init_color();
+t_color_config* init_color_config();
 
 
 void f_push_back(t_color* node_to_add, t_color_config* node_config);
-t_color* f_create_color_node(char* color_code, int nb);
-t_color_config* f_create_color_config();
 
+// src/logo/allocs
+t_color_config* f_create_color_config();
+t_color* f_create_color_node(char* color_code, int nb);
+//
 
 void f_colors_options(void);
 void bold_black(void);

@@ -92,7 +92,7 @@ typedef struct s_color
 {
 	char*			code;
 	int				nb;
-	struct s_color*	next;
+	struct s_color*		next;
 }	t_color;
 
 

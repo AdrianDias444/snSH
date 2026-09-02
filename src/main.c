@@ -2,21 +2,37 @@
 
 int main(void)
 {
-	char			input[50];
-	t_color_config* color_config;
-	t_bar* bar;
-	
-	color_config = init_color_config();
-	bar = init_bar(NULL, color_config);
-
-	color(color_config, bar);
+	char* input;
 
 	while(BOOL_TRUE)
 	{
-		//bar->last_command = NULL;
-		f_command_bar_manager(bar);
-		fgets(input, sizeof(input), stdin);
-		//bar->last_command = input;
-		parser(input, color_config, bar);
+		input = parser(valid_cmd());
 	}
 }
+
+
+
+
+// implementations
+
+// parser
+// command bar
+// snailfetch
+
+
+
+
+// Notes
+
+// need to pass a char** list, of the corrects commands to parser
+
+
+
+
+// sequence
+
+// command bar is printed
+// parser treats and return input
+// caller calls the rights function or built-ins
+// snailfetch only works when called
+

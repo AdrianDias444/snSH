@@ -1,4 +1,4 @@
-#include "../../header.h"
+#include "../header.h"
 
 void* cmd_valid(char* cmd, t_color_config* color_config, t_bar* bar)
 {

@@ -3,12 +3,12 @@
 
 char* f_remove_newline(char* str)
 {
-	char* str_dup;
+	char* dup;
 
 
-	str_dup = f_strdup(str);
-	str_dup[f_strlen(str_dup) - 1] = '\0';
-	return(str_dup);
+	dup = f_strdup(str);
+	dup[f_strlen(dup) - 1] = '\0';
+	return(dup);
 }
 
 

@@ -51,7 +51,7 @@ void bold_white(void)
 
 void f_colors_options(void)
 {
-	printf("//Bold high intensity text\n");
+	printf("\n");
 	bold_black();
 	bold_red();
 	bold_green();

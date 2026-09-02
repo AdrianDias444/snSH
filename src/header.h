@@ -8,8 +8,9 @@
 #include <string.h>
 
 
-#include "logo/colors.h"
+#include "snailfetch/colors.h"
 #include "command-bar/bar.h"
+#include "parser/parser.h"
 
 #define BOOL_TRUE 1
 
@@ -65,17 +66,12 @@ typedef struct s_config
 
 
 char* retrieve_cmd(char* argv);
-void parser(char* argv, t_color_config* color_config, t_bar* bar);
-char* f_error_msg(char* unknown_command);
-
-
 
 void cd();
 void clear();
 
 
 
-void color_parser(t_color_config* color_config, char** cmd_args, t_bar* bar);
 void color(t_color_config* color_config, t_bar* bar);
 void color_help(t_bar* bar);
 void color_define(t_color_config* color_config, char* color_digit, t_bar* bar);
@@ -91,6 +87,7 @@ size_t	f_strlcpy(char *dst, char *src, size_t size);
 char* f_strdup(char* str);
 char* f_remove_newline(char* str);
 char** f_split(char* s, char c);
+char* f_strip(char* str);
 
 
 

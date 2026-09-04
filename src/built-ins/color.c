@@ -1,22 +1,25 @@
 #include "../header.h"
 
 // color manager
-void color_parser(t_color_config* color_config, char** cmd_args)
+void color_parser(t_init* init, char** cmd_args)
 {
 
 	if (!cmd_args[1])
 	{
-		color(color_config);
+		color(init->color_config);
 		return ;
 	}
 	if (strcmp(cmd_args[1], "--help") == 0)
 		color_help();
 
-	if (strcmp(cmd_args[1], "--define") == 0)
-		color_define(color_config, cmd_args[2]);
+	if (strcmp(cmd_args[1], "--snailfetch") == 0)
+		color_define(init->color_config, cmd_args[2]);	
+	
+	if(strcmp(cmd_args[1], "--text") == 0)
+			color_define_text(init, cmd_args[2]);
 
 	if (strcmp(cmd_args[1], "-n") == 0)
-		color_name(color_config);
+		color_name(init->color_config);
 }
 
 
@@ -46,6 +49,18 @@ void color_define(t_color_config* color_config, char* color_digit)
 	print_banner(color->code);
 	f_colors_options();
 }
+
+// color --define --text
+void color_define_text(t_init* init, char* color_digit)
+{
+	t_color* color;
+
+	color = find_color_with_nb(init->color_config, atoi(color_digit));
+	init->bar->color = color;
+}
+
+
+
 
 // color -n
 void color_name(t_color_config* color_config)

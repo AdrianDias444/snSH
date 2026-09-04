@@ -102,6 +102,7 @@ typedef struct s_color_config
 {
 	t_color*	first_color;
 	t_color*	actual_color;
+	t_color*	text_color;
 	size_t		color_counter;
 }	t_color_config;
 

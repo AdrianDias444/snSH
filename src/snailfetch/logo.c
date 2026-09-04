@@ -18,3 +18,6 @@ void print_banner(char* color)
     printf(RESET);
     printf("\n");
 }
+
+
+

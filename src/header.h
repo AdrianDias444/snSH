@@ -69,7 +69,7 @@ typedef struct s_config
 void cd();
 void clear();
 
-void color_parser(t_color_config* color_config, char** cmd_args);
+void color_parser(t_init* init, char** cmd_args);
 
 
 void color(t_color_config* color_config);
@@ -77,6 +77,7 @@ void color_help(void);
 void color_define(t_color_config* color_config, char* color_digit);
 void color_name(t_color_config* color_config);
 t_color* find_color_with_nb(t_color_config* color_config, int nb);
+void color_define_text(t_init* init, char* color_digit);
 
 void ls();
 

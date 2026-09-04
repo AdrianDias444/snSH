@@ -50,12 +50,23 @@ To Do:
 	-> improve ["color"] command:
 		select specific color passing the respective digit for color
 		add colors flags, like ["colors -n"], for view the current color digit
-		.["--text"] flag to change text printed after this momment
+		["--text"] flag to change text printed after this momment
+			.need cover segfaults, like if doest put a digit color
 		in ["colors --help], print MACRO with their respective color
+
+	-> command bar
+		implement a command bar
+		change color of command bar
+		.change format of command bar
+
+
 
 	-> create ["snailfetch"] command:
 		like a neofetch, only for print actual banner color letter
 		.snailfetch improve to show pc details
+			.make a bash script to test possible output
+			.create a function to "get next line" of all bash commands
+			.and use popen to execute and catch the ouput of each command
 		.snailfetch improve to show/hide with
 ["snailfetch show/hide"]
 		.snailfetch improve to show specific arch based
@@ -86,9 +97,6 @@ because rm command will not work, need to build initially.
 		.like a lot of backspaces
 
 
-
-
-
 	-> implement flashback system
 		.last commands executed, with arrows
 
@@ -96,11 +104,6 @@ because rm command will not work, need to build initially.
 	-> start built-ins
 		.ls command, first show all of the folder first. pls
 		.man
-
-	-> command bar
-		.implement a command bar
-		.change color of command bar
-		.change format of command bar
 
 	-> Arch Package
 		.turn snailfetch a arch linux package, to be installed
